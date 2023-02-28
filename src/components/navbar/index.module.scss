@@ -1,0 +1,107 @@
+@import 'src/styles/globals.scss';
+
+.container {
+    top: 0;
+    width: 100%;
+    z-index: 99;
+    height: 70px;
+    display: grid;
+    max-width: 1024px;
+    padding: 10px 60px;
+    position: absolute;
+    align-items: center;
+    grid-template-columns: 1fr 2fr 1fr;
+
+    .logo {
+        display: flex;
+        cursor: pointer;
+        font-size: 20px;
+        color: $text-color;
+        font-weight: bolder;
+    }
+
+    .menu {
+        gap: 30px;
+        display: flex;
+        list-style-type: none;
+
+        .item {
+            color: gray;
+            cursor: pointer;
+            font-weight: 500;
+            position: relative;
+            transition: color 0.3s;
+
+            &.actived {
+                color: $text-color;
+
+                &::after {
+                    width: 50%;
+                }
+            }
+
+            &::after {
+                left: 0;
+                width: 0;
+                height: 3px;
+                content: "";
+                bottom: -4px;
+                position: absolute;
+                border-radius: 24px;
+                background-color: $primary-color;
+                transition: width 0.3s ease-in-out;
+            }
+
+            &:hover {
+                color: $text-color;
+
+                &::after {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .authen {
+        gap: 24px;
+        width: 100%;
+        display: flex;
+        font-weight: bold;
+        align-items: center;
+        color: $primary-color;
+        justify-content: flex-end;
+
+        .item {
+            cursor: pointer;
+
+            &.sign_up {
+                padding: 8px 16px;
+                border-radius: 24px;
+                border: 1px solid $primary-color;
+            }
+        }
+    }
+
+    @include tablet() {
+        grid-template-columns: 1fr 1fr;
+
+
+        .menu {
+            display: none;
+        }
+
+        .authen {
+            .item {
+                display: none;
+
+                &.sign_up {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    @include mobile() {
+        padding: 10px 30px;
+    }
+}

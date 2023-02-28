@@ -1,0 +1,27 @@
+$primary-color: #da7a77;
+$secondary-color: #e0c3ac;
+$text-color: #222222;
+
+$tomato-10-color: #fff0e9;
+$tomato-20-color: #ffeadf;
+$tomato-90-color: #e95857;
+
+$gold-10-color: #ffcc64;
+
+@mixin desktop() {
+    @media only screen and (min-width:'600px') {
+        @content
+    }
+}
+
+@mixin tablet() {
+    @media only screen and (max-width:'768px') {
+        @content
+    }
+}
+
+@mixin mobile() {
+    @media only screen and (max-width:'600px') {
+        @content
+    }
+}
