@@ -29,7 +29,7 @@ const navbarItems = [
 const Navbar = () => {
   return (
     <div className={styles.container}>
-      <div className={styles.logo}>Tobemono</div>
+      <div className={styles.logo}>Foodiny</div>
       <ul className={styles.menu}>
         {navbarItems?.map(({ id, content }) => (
           <li

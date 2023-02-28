@@ -9,21 +9,21 @@ const bannerItems = [
     title: 'Fast Delivery',
     iconSrc: '/deadline.png',
     description:
-      'The Food Will Be Delivered to Your Home Within 1-2 Hours Of Your Ordering.',
+      'The food will be delivered to your home within 1-2 hours of your ordering.',
   },
   {
     id: 2,
     title: 'Fresh Food',
     iconSrc: '/repeat.png',
     description:
-      'Your Food Will Be Delivered 100% Fresh To Your Home. We Do Not Deliver Stale Food',
+      'Your food will be delivered 100% fresh to your home. we do not deliver stale food',
   },
   {
     id: 3,
     title: 'Free Delivery',
     iconSrc: '/free-delivery.png',
     description:
-      'Your Food Delevery is Absolutely Free. No Cost Just Order And Enjoy.',
+      'Your food delivery is absolutely free. no cost hust order and enjoy.',
   },
 ]
 
@@ -33,15 +33,15 @@ const MainComponent = () => {
       <div className={styles.container}>
         <div className={styles.title_box}>
           <h1 className={styles.title}>
-            {`All Fast Food is \n Available at Tobemono`}
+            {`All Fast Food is \n Available at Foodiny`}
           </h1>
         </div>
         <div className={styles.image_container}>
           <div className={styles.image_1}>
-            <Image alt="" width={250} height={250} src="/burger.png" />
+            <Image priority alt="" width={250} height={250} src="/burger.png" />
           </div>
           <div className={styles.image_2}>
-            <Image alt="" width={200} height={200} src="/french-fries.png" />
+            <Image priority alt="" width={200} height={200} src="/french-fries.png" />
           </div>
           <div className={styles.shadow} />
         </div>
