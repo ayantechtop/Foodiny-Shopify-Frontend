@@ -14,13 +14,13 @@ const bestCategoryItems = [
   {
     id: 2,
     src: '/pizza.png',
-    title: 'Chicken Burger',
+    title: 'Chicken Pizza',
     backgroundColor: '#ffcc64',
   },
   {
     id: 3,
     src: '/french-fries-2.png',
-    title: 'Chicken Burger',
+    title: 'French Fries',
     backgroundColor: '#d06c7a',
   },
 ]
