@@ -40,17 +40,7 @@
                 }
             }
 
-            &::after {
-                left: 0;
-                width: 0;
-                height: 3px;
-                content: "";
-                bottom: -4px;
-                position: absolute;
-                border-radius: 24px;
-                background-color: $primary-color;
-                transition: width 0.3s ease-in-out;
-            }
+            @include bottomLine();
 
             &:hover {
                 color: $text-color;

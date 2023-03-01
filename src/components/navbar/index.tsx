@@ -28,7 +28,7 @@ const navbarItems = [
 
 const Navbar = () => {
   return (
-    <div className={styles.container}>
+    <nav className={styles.container}>
       <div className={styles.logo}>Foodiny</div>
       <ul className={styles.menu}>
         {navbarItems?.map(({ id, content }) => (
@@ -44,7 +44,7 @@ const Navbar = () => {
         <div className={styles.item}>Login</div>
         <div className={cx(styles.item, styles.sign_up)}>Sign Up</div>
       </div>
-    </div>
+    </nav>
   )
 }
 

@@ -1,0 +1,149 @@
+@import 'src/styles/globals.scss';
+
+.container {
+    gap: 60px;
+    width: 100%;
+    display: flex;
+    max-width: 1024px;
+    margin-top: 140px;
+    padding: 0 60px 50px;
+    flex-direction: column;
+
+    .top {
+        display: flex;
+        justify-content: space-between;
+
+        .title {
+            margin: 0;
+            font-size: 36px;
+            white-space: pre-line;
+
+            span {
+                color: $tomato-90-color;
+            }
+        }
+
+        .description {
+            color: gray;
+            display: flex;
+            font-size: 13px;
+            max-width: 250px;
+            align-items: center;
+        }
+    }
+
+    .bottom {
+        gap: 10px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        .item {
+            gap: 50px;
+            display: flex;
+            position: relative;
+            align-items: center;
+            flex-direction: column;
+
+            .background {
+                top: 0;
+                right: 0;
+                z-index: 0;
+                width: 200px;
+                opacity: 0.5;
+                height: 200px;
+                position: absolute;
+                border-radius: 50%;
+                transform: translateY(10%);
+            }
+
+            &:nth-child(1) {
+                img {
+                    transform: rotate(-10deg) translateX(-10px);
+                }
+            }
+
+            &:nth-child(2) {
+                img {
+                    transform: rotate(-10deg) translateX(10px);
+                }
+            }
+
+            &:nth-child(3) {
+                img {
+                    transform: rotate(10deg) translateX(-10px);
+                }
+            }
+
+            .order_box {
+                gap: 10px;
+                display: flex;
+                font-weight: bold;
+                align-items: center;
+                flex-direction: column;
+
+                .title {
+                    font-size: 18px;
+                    text-align: center;
+                }
+
+                .order {
+                    cursor: pointer;
+                    font-size: 14px;
+                    position: relative;
+                    color: $primary-color;
+
+                    @include bottomLine(2px);
+
+                    &:hover::after {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    @include tablet() {
+        gap: 20px;
+        margin-top: 220px;
+
+        .top {
+            gap: 20px;
+            flex-direction: column;
+        }
+
+        .bottom {
+            gap: 40px;
+            flex-wrap: wrap;
+            justify-content: space-around;
+
+            .item {
+                gap: 40px;
+
+                .background {
+                    right: unset;
+                }
+
+                &:nth-child(1) {
+                    img {
+                        transform: rotate(-10deg) scale(0.9);
+                    }
+                }
+
+                &:nth-child(3) {
+                    img {
+                        transform: rotate(10deg);
+                    }
+                }
+            }
+        }
+    }
+
+    @include mobile() {
+        padding: 0 30px 50px;
+
+        .bottom {
+            flex-direction: column;
+        }
+    }
+}
