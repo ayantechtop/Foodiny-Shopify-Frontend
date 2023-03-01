@@ -2,6 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 
 import styles from './index.module.scss'
+import Button from 'src/components/button'
 
 const bannerItems = [
   {
@@ -41,13 +42,17 @@ const Hero = () => {
             <Image priority alt="" width={250} height={250} src="/burger.png" />
           </div>
           <div className={styles.image_2}>
-            <Image priority alt="" width={200} height={200} src="/french-fries.png" />
+            <Image
+              priority
+              alt=""
+              width={200}
+              height={200}
+              src="/french-fries.png"
+            />
           </div>
           <div className={styles.shadow} />
         </div>
-        <div tabIndex={0} className={styles.button}>
-          Buy Now
-        </div>
+        <Button>Buy Now</Button>
         <ul className={styles.banner_container}>
           {bannerItems?.map(({ id, title, iconSrc, description }) => (
             <li key={id} className={styles.item}>
