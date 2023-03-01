@@ -1,7 +1,8 @@
 import React from 'react'
+import Image from 'next/image'
+import { Variants, motion } from 'framer-motion'
 
 import styles from './index.module.scss'
-import Image from 'next/image'
 
 const bestCategoryItems = [
   {
@@ -24,6 +25,22 @@ const bestCategoryItems = [
   },
 ]
 
+const imageMotionVariant: Variants = {
+  offscreen: {
+    y: 80,
+    opacity: 0,
+  },
+  onscreen: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      bounce: 0.6,
+      duration: 1.4,
+      type: 'spring',
+    },
+  },
+}
+
 const BestCategory = () => {
   return (
     <div className={styles.container}>
@@ -38,14 +55,22 @@ const BestCategory = () => {
       </div>
       <div className={styles.bottom}>
         {bestCategoryItems?.map(({ id, src, title, backgroundColor }) => (
-          <div key={id} className={styles.item}>
+          <motion.div
+            key={id}
+            initial="offscreen"
+            whileInView="onscreen"
+            className={styles.item}
+            viewport={{ once: true, amount: 0.4 }}
+          >
             <div className={styles.background} style={{ backgroundColor }} />
-            <Image src={src} width={200} height={200} alt="" />
+            <motion.div variants={imageMotionVariant}>
+              <Image src={src} width={200} height={200} alt="" />
+            </motion.div>
             <div className={styles.order_box}>
               <div className={styles.title}>{title}</div>
               <div className={styles.order}>Order Now</div>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>
