@@ -63,7 +63,12 @@ const BestCategory = () => {
             viewport={{ once: true, amount: 0.4 }}
           >
             <div className={styles.background} style={{ backgroundColor }} />
-            <motion.div variants={imageMotionVariant}>
+            <motion.div
+              whileTap={{ scale: 1.05 }}
+              whileHover={{ scale: 1.1 }}
+              style={{ cursor: 'pointer' }}
+              variants={imageMotionVariant}
+            >
               <Image src={src} width={200} height={200} alt="" />
             </motion.div>
             <div className={styles.order_box}>

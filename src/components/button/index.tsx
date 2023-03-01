@@ -1,5 +1,6 @@
 import React from 'react'
 import cx from 'clsx'
+import { motion } from 'framer-motion'
 
 import styles from './index.module.scss'
 
@@ -10,9 +11,13 @@ interface ButtonProps {
 
 const Button = ({ className, children }: ButtonProps) => {
   return (
-    <div tabIndex={0} className={cx(styles.button, className)}>
+    <motion.div
+      tabIndex={0}
+      whileHover={{ scale: 1.05 }}
+      className={cx(styles.button, className)}
+    >
       {children ?? 'Button'}
-    </div>
+    </motion.div>
   )
 }
 

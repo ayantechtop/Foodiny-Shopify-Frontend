@@ -1,11 +1,12 @@
-import React, { Suspense } from 'react'
+import React from 'react'
 import useSWR from 'swr'
+import Image from 'next/image'
 
 import Button from 'src/components/button'
 
+import type { RegularMenuItem } from 'src/types/regularModel'
+
 import styles from './index.module.scss'
-import { RegularMenuItem } from 'src/types/regularModel'
-import Image from 'next/image'
 
 const RegularMenuItems = () => {
   const { data, error, isLoading } = useSWR<RegularMenuItem[]>(

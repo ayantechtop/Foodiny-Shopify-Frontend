@@ -5,7 +5,7 @@
     width: 100%;
     display: flex;
     max-width: 1024px;
-    padding: 0 60px 150px;
+    padding: 0 60px 100px;
     flex-direction: column;
 
     .title {
@@ -49,11 +49,13 @@
             height: 250px;
             padding: 20px;
             display: flex;
+            cursor: pointer;
             position: relative;
             border-radius: 24px;
             flex-direction: column;
             justify-content: flex-end;
             background-color: $tomato-20-color;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 
             .name {
                 font-size: 18px;
@@ -99,8 +101,8 @@
                 right: -20px;
                 display: grid;
                 padding: 10px;
-                border-radius: 50%;
                 position: absolute;
+                border-radius: 50%;
                 place-items: center;
                 background-color: $tomato-10-color;
                 border: 8px solid $tomato-90-color;
@@ -115,7 +117,7 @@
     }
 
     @include mobile() {
-        padding: 0 30px 150px;
+        padding: 0 30px 100px;
 
         .menu_container {
             gap: 20px;
@@ -125,16 +127,12 @@
             padding: 50px 0 20px;
             flex-flow: row nowrap;
             scroll-snap-type: x mandatory;
-            
+
             .card {
                 min-width: 200px;
                 padding: 20px 14px;
-                scroll-snap-align: start;
                 position: relative;
-
-                .title {
-
-                }
+                scroll-snap-align: start;
             }
         }
     }

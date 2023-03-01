@@ -3,6 +3,7 @@ import Head from 'next/head'
 import { Quicksand } from '@next/font/google'
 
 import Navbar from 'src/components/navbar'
+import Footer from 'src/components/footer'
 import MainComponent from 'src/components/main'
 
 import styles from 'src/styles/Home.module.scss'
@@ -24,6 +25,7 @@ export default function Home() {
       <main className={cx(styles.main, quickSand.className)}>
         <Navbar />
         <MainComponent />
+        <Footer />
       </main>
     </>
   )

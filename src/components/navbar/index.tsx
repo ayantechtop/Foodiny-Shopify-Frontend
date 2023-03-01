@@ -3,7 +3,7 @@ import cx from 'clsx'
 
 import styles from './index.module.scss'
 
-const navbarItems = [
+export const navbarItems = [
   {
     id: 1,
     content: 'Home',

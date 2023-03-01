@@ -5,8 +5,8 @@
     width: 100%;
     display: flex;
     max-width: 1024px;
-    margin-top: 140px;
-    padding: 0 60px 150px;
+    margin-top: 150px;
+    padding: 0 60px 90px;
     flex-direction: column;
 
     .top {
@@ -141,7 +141,7 @@
     }
 
     @include mobile() {
-        padding: 0 30px 150px;
+        padding: 0 30px 90px;
 
         .bottom {
             flex-direction: column;
