@@ -43,7 +43,7 @@ const regularMenuItems: RegularMenuItem[] = [
     price: "6.50",
     rating: 163,
     src: '/ramen.png',
-    name: `Noddle's Ramen`,
+    name: `Noodle's Ramen`,
   },
 ]
 

@@ -20,6 +20,12 @@ export default function Home() {
           content="Food delivery web application mock up"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Foodiny" />
+        <meta
+          property="og:description"
+          content="Food delivery web application mock up"
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={cx(styles.main, quickSand.className)}>

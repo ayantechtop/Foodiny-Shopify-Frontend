@@ -177,6 +177,8 @@
         padding: 110px 30px 240px;
 
         .title_box {
+            max-width: 260px;
+
             &::after {
                 left: 0;
                 right: unset;
@@ -195,7 +197,7 @@
             width: calc(100% - 60px);
 
             .item {
-                gap: 30px;
+                gap: 20px;
             }
         }
     }
